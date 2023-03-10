@@ -1,11 +1,47 @@
 import React, { useState } from "react";
 
 const Content = () => {
+  const [name, setName] = useState("Jason");
+  const [color, setColor] = useState("navy");
   const [counter1, setCounter1] = useState(1);
   const [counter2, setCounter2] = useState(1);
   const [counter3, setCounter3] = useState(1);
   const [counter4, setCounter4] = useState(1);
   const [outputMessage, setOutputMessage] = useState("");
+
+  const handleNameChange = () => {
+    const names = [
+      "Mary",
+      "John",
+      "Terry",
+      "William",
+      "Hannah",
+      "Joe",
+      "Andrew",
+      "Sally",
+      "David",
+      "Elias",
+      "Elizabeth",
+      "Michelle",
+    ];
+
+    const nameIndex = Math.floor(Math.random() * 12);
+
+    setName(names[nameIndex]);
+
+    const bColors = [
+      "crimson",
+      "darkgreen",
+      "black",
+      "navy",
+      "orange",
+      "darkgray",
+    ];
+
+    const colorIndex = Math.floor(Math.random() * 6);
+
+    setColor(bColors[colorIndex]);
+  };
 
   const handleClick1 = () => {
     setOutputMessage(
@@ -33,7 +69,11 @@ const Content = () => {
 
   return (
     <main>
-      <h4>This is the content of our page</h4>
+      <h3 style={{ color: `${color}` }}>This is the content of our page</h3>
+      <br />
+      <p>Hallo {name}</p>
+      <br />
+      <button onClick={handleNameChange}>Change Name</button>
       <br />
       <p onDoubleClick={handleClick1}>Double Click Paragraph 1</p>
       <br />
