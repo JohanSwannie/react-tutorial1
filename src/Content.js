@@ -8,27 +8,27 @@ const Content = () => {
   const [outputMessage, setOutputMessage] = useState("");
 
   const handleClick1 = () => {
-    setCounter1(counter1 + 1);
     setOutputMessage(
       `You have double clicked on the paragraph ${counter1} times`
     );
+    setCounter1(counter1 + 1);
   };
 
   const handleClick2 = () => {
-    setCounter2(counter2 + 1);
     setOutputMessage(`You have clicked on button one ${counter2} times`);
+    setCounter2(counter2 + 1);
   };
 
   const handleClick3 = (name) => {
-    setCounter3(counter3 + 1);
     setOutputMessage(`You have clicked on "${name}" ${counter3} times`);
+    setCounter3(counter3 + 1);
   };
 
   const handleClick4 = (event) => {
-    setCounter4(counter4 + 1);
     setOutputMessage(
       `Clicked ${counter4} times and the event is ${event.target.innerText}`
     );
+    setCounter4(counter4 + 1);
   };
 
   return (
