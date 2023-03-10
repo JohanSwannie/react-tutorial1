@@ -58,8 +58,14 @@ footer {
   place-content: center;
 }
 
-button, p {
-  background-color: blue;
+button {
+  background-color: navy;
   color: #FFF;
+  font-weight: bold;
   padding: .3rem;
+}
+
+p {
+  color: #000;
+  font-weight: bold;
 }
