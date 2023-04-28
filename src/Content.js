@@ -36,9 +36,12 @@ const Content = () => {
       "navy",
       "orange",
       "darkgray",
+      "rebeccapurple",
+      "green",
+      "navy",
     ];
 
-    const colorIndex = Math.floor(Math.random() * 6);
+    const colorIndex = Math.floor(Math.random() * 9);
 
     setColor(bColors[colorIndex]);
   };
